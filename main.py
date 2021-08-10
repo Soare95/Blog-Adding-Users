@@ -91,7 +91,6 @@ class Comment(db.Model):
     text = db.Column(db.Text, nullable=False)
 
 
-
 @app.route('/')
 def get_all_posts():
     posts = BlogPost.query.all()
@@ -234,4 +233,4 @@ def delete_post(post_id):
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
